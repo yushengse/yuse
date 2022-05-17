@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title>无标题文档</title>
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+			background: url("images/3.jpg") center/cover no-repeat ;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+		}
+		
+		.a{
+			width: 800px;
+			height:500px;
+			box-shadow: 0px 5px 10px 0px #A37575;
+			border-radius: 10px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			background: url("images/3.jpg") center/cover no-repeat;
+			overflow: hidden;
+		}
+		.b{
+			
+			transition: 0.5s;
+			margin: 0 auto;
+			position: relative;
+			left: 0;
+			border-radius: 0px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+		}
+		.b-1{
+			width: 400px;
+			height:500px;
+			padding: 0px;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+			flex-direction: column;
+			background: #FFFFFF;
+			color: #8C8C8C;
+			flex-shrink: 0
+		}
+		.b-1-1{
+			display: flex;
+			justify-content:center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.b-2{
+			width: 400px;
+			display: flex;
+			flex-shrink: 0;
+			justify-content:center;
+			align-items:center;
+			flex-direction: column;
+			position: relative;
+			color:#FFFFFF;
+			transition: 0.5;
+		}
+		input,textarea{
+			width: 300px;
+			height: 40px;
+			display: inline-block;
+			outline:0;
+			margin: 15px;
+			font-size: 16px;
+			color: inherit;
+			border: 1px solid;
+			border-radius:5px;
+		}
+		
+		input[type="button"]{
+
+			background: #A37575;
+			border: 1px solid #A37575;
+			color: #FFFFFF;
+			transition: 0.3s;
+		}
+		input[type="radio"]{
+			display: none;
+		}
+		input[id="radio-denglu"]:checked~.b{
+			left: -400px;
+		}
+		input[id="radio-zhuce"]:checked~.b{
+			left:0px;
+		}
+		
+		input[id="radio-denglu"]:checked~.b .b-2 #denglu{
+			bottom: -200px;
+			opacity:0 ;
+		}
+		input[id="radio-denglu"]:checked~.b .b-2 #zhuce{
+			bottom: 0px;
+			opacity: 1;
+		}
+		
+		input[id="radio-zhuce"]:checked~.b .b-2 #zhuce{
+			bottom: -200px;
+			opacity: 0;
+		}
+		}input[id="radio-zhuce"]:checked~.b .b-2 #denglu{
+			bottom:0px;
+			opacity: 1;
+			
+		}
+		#denglu{
+			position: absolute;
+			bottom:0px;
+			transition: 1s;
+			text-align: center;
+		}
+		#zhuce{
+			position: absolute;
+			bottom: -200px;
+			opacity: 0;
+			transition: 1s;
+			text-align: center;
+		}
+		label{
+			color:#ffffff;
+			border:1px solid ;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 10px;
+			display: block;
+		}
+		input[type="button"]:active{
+			background: #7A2B2D
+		}
+		input[type="button"]:hover{
+			box-shadow: 0 0 10px 0 #A37575;
+		}
+	</style>
+</head>
+
+<body>
+	
+	
+<div class="a">
+	<input type="radio" value="单选" name="denglu-zhuce" id="radio-denglu">
+	<input type="radio" value="单选" name="denglu-zhuce" id="radio-zhuce">
+	<div class="b" >
+		<div class="b-1" >
+			<a href="首页.html"><img src="images/nav.jpg"></a>
+			<h1>注册</h1>
+			<form class="b-1-1">
+				<input type="email" id="input-1"  placeholder="邮箱">
+			  	<input type="password" id="input-2" placeholder="密码">
+			  	<input type="button" id="emsil1" value="注册">
+			</form>
+		</div>
+		<div class="b-2">
+			<div id="zhuce">
+				<h1>没有账号嘛</h1>
+				<p>快来加入我们吧</p>
+				
+				<label for="radio-zhuce" >注册</label></div>
+			<div id="denglu">
+				<h1>已经有账号</h1>
+				<p>赶紧来登录</p>
+				
+				<label for="radio-denglu" >登录</label></div>
+		</div>
+		<div class="b-1" >
+			<a href="首页.html"><img src="images/nav.jpg"></a>
+			<h1>登录</h1>
+			<form class="b-1-1">
+				<input type="email" id="input-3"  placeholder="邮箱">
+			  	<input type="password" id="input-4" placeholder="密码">
+			  	<input type="button" id="emsil2" value="登录">
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
